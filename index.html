@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Peredaran Darah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Import Three.js dari CDN -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <button id="btn-audio-toggle">🔊 Musik: ON</button>
+
+    <div id="ui-layer">
+        <!-- Halaman Utama -->
+        <div id="home-screen" class="screen active">
+            <h1>Sistem Peredaran Darah Manusia</h1>
+            <p>Jelajahi jantung dan pembuluh darah secara interaktif!</p>
+            <button id="btn-explore">Mulai Jelajah 3D</button>
+            <button id="btn-quiz">Mulai Kuis</button>
+            <a id="btn-ppt" href="https://gamma.app/docs/Menjelajahi-Sistem-Peredaran-Darah-Kita-uu5y7v9s17wv7zf" target="_blank" style="background-color: #457b9d; text-decoration: none; display: inline-block;">Materi PPT</a>
+        </div>
+
+        <!-- Mode Eksplorasi (Info Panel) -->
+        <div id="explore-screen" class="screen">
+            <button id="btn-back-home" class="top-left-btn">Kembali</button>
+            <div id="info-panel" class="hidden">
+                <h2 id="info-title">Nama Organ</h2>
+                <p id="info-desc">Deskripsi organ akan muncul di sini.</p>
+                <button id="btn-close-info">Tutup</button>
+            </div>
+            <div id="hint">Klik pada bagian yang berkedip untuk mempelajari lebih lanjut. Geser layar untuk memutar kamera.</div>
+        </div>
+
+        <!-- Mode Kuis -->
+        <div id="quiz-screen" class="screen">
+            <button id="btn-back-home-quiz" class="top-left-btn">Berhenti Kuis</button>
+            <div id="quiz-container">
+                <h2 id="question-text">Pertanyaan akan muncul di sini</h2>
+                <div id="options-container">
+                    <!-- Tombol opsi jawaban dibuat dari JS -->
+                </div>
+                <p id="quiz-feedback" class="hidden"></p>
+                <p id="quiz-progress">Pertanyaan 1 dari 5</p>
+            </div>
+        </div>
+
+        <!-- Hasil Kuis -->
+        <div id="result-screen" class="screen">
+            <h2>Kuis Selesai!</h2>
+            <p>Skor kamu:</p>
+            <h1 id="score-display">0/100</h1>
+            <p id="score-message"></p>
+            <button id="btn-retry-quiz">Coba Lagi</button>
+            <button id="btn-back-home-result">Kembali ke Menu</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/quiz.js"></script>
+</body>
+</html>
