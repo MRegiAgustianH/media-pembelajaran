@@ -37,9 +37,9 @@ const quizFeedback = document.getElementById('quiz-feedback');
 const quizProgress = document.getElementById('quiz-progress');
 const scoreDisplay = document.getElementById('score-display');
 const scoreMessage = document.getElementById('score-message');
-const sfxCorrect = new Audio('https://upload.wikimedia.org/wikipedia/commons/b/b5/Blop.ogg');
-const sfxWrong = new Audio('https://upload.wikimedia.org/wikipedia/commons/1/15/Buzzer_2.ogg');
-const sfxClick = new Audio('https://upload.wikimedia.org/wikipedia/commons/4/43/Beep_beep.ogg');
+const sfxCorrect = new Audio('assets/audio/dragon-studio-correct-472358.mp3');
+const sfxWrong = new Audio('assets/audio/freesound_community-wrong-47985.mp3');
+const sfxClick = new Audio('assets/audio/mixkit-select-click-1109.wav');
 
 export function startQuiz() {
     currentQuestionIndex = 0;

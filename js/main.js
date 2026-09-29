@@ -7,8 +7,8 @@ import { startQuiz } from './quiz.js';
 
 // --- Sistem Audio ---
 export const audioSys = {
-    bgm: new Audio('https://upload.wikimedia.org/wikipedia/commons/4/4e/Kevin_MacLeod_-_Carefree.ogg'),
-    click: new Audio('https://upload.wikimedia.org/wikipedia/commons/4/43/Beep_beep.ogg'),
+    bgm: new Audio('assets/audio/Motion Array-Door punch Edit01.mp3'),
+    click: new Audio('assets/audio/mixkit-select-click-1109.wav'),
     isMuted: false,
     init: function() {
         this.bgm.loop = true;
